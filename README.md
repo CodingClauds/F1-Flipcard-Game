@@ -8,5 +8,5 @@ This display's the hours, minutes, seconds format.
 </p>  
 
 
-<img src="./assets/stopwatch-screengrab.png" />
+<img src="./assets/stopwatch-screengrab.png" style="width:80%;" />
 
