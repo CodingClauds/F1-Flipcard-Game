@@ -14,6 +14,7 @@ window.onload = (event) => {
   timerSeconds.innerText = "00:00:00";
 
   buttonStart.addEventListener("click", () => {
+    console.log("START MY ENGINE");
     intervalID = setInterval(function () {
       seconds++;
       let hours = Math.floor(seconds / 3600);
@@ -38,7 +39,7 @@ window.onload = (event) => {
   });
 
   buttonReset.addEventListener("click", () => {
-    console.log("RESET Bishhh");
+    console.log("RESET");
 
     // Re-state variables again to "null" in theory
     timerSeconds.innerText = "00:00:00";
