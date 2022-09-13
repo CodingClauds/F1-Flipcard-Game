@@ -59,9 +59,8 @@ window.onload = (event) => {
 
   // Dynamic Date-Year, this will change once a year.
   const copyrightYear = document.getElementById("copyright-year");
-  const today = new Date();
-  const currentYear = today.getFullYear();
+  const today = new Date().getFullYear();
 
-  copyrightYear.innerText = currentYear;
+  copyrightYear.innerText = today;
   console.log(currentYear);
 };
