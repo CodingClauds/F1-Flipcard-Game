@@ -1,7 +1,7 @@
 /* Variabes */
 /* Mixin's */
 body {
-  background: #fea503;
+  background: #fff;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   height: 100%;
 }
@@ -11,8 +11,12 @@ body {
   margin: 30px auto;
   color: #fff;
   text-align: center;
-  border-bottom: 1px solid white;
   padding-bottom: 5rem;
+  background-color: #ff0000;
+  opacity: 0.9;
+  border: 1px solid #fff;
+  box-shadow: 0 4px 20px -1px rgba(0, 0, 0, 0.73);
+  border-radius: 15px;
 }
 
 h1,
@@ -32,8 +36,8 @@ h3 {
 button {
   border-radius: 5px;
   -khtml-border-radius: 5px;
-  background: #fea503;
-  color: #fff;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.814);
   border: solid 1px #fff;
   text-decoration: none;
   cursor: pointer;
@@ -45,14 +49,14 @@ button {
 }
 button:hover {
   transition: all 0.5s ease-in-out;
-  background: #fff;
+  background: rgba(0, 0, 0, 0.814);
   border: solid 1px #fff;
-  color: #fea503;
+  color: #fff;
 }
 
 .copyright {
   display: flex;
   justify-content: center;
   font-size: 14px;
-  color: white;
+  color: rgba(0, 0, 0, 0.814);
 }
