@@ -62,5 +62,4 @@ window.onload = (event) => {
   const today = new Date().getFullYear();
 
   copyrightYear.innerText = today;
-  console.log(currentYear);
 };
