@@ -1,9 +1,20 @@
-/* Variabes */
-/* Mixin's */
+/* Variabes */ /* Mixin's */
 body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   background: #fff;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  height: 100%;
+  height: 100vh;
+  background-color: rgb(220, 220, 214);
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .wrapper {
@@ -54,9 +65,44 @@ button:hover {
   color: #fff;
 }
 
+.game__container {
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  justify-content: center;
+  perspective: 500px;
+}
+.game__card {
+  position: relative;
+  height: 175px;
+  width: 125px;
+}
+.game__card-face {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border-width: 1px;
+  border-style: solid;
+  overflow: hidden;
+  transition: transform 500ms ease-in-out;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.game__driver-img {
+  height: 180px;
+}
+
 .copyright {
   display: flex;
   justify-content: center;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.814);
+  border-top: 1px solid rgba(0, 0, 0, 0.814);
+  padding-top: 2rem;
+  margin: 0 2rem;
 }
