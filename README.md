@@ -1,11 +1,5 @@
 # Stopwatch
 
-Basic Stopwatch that features:
-<br/>
-
-<p>
-This display's the hours, minutes, seconds format. 
-  Most importantly, it does increment, stop the timer and reset timer as intended.
-</p>
+Here's the Formula-1 theme with all 20 drivers from the 2022 driver lineup, let's match the pairs and see what you know!
 
 <img src="./assets/screengrab.png" style="width:80%;" />

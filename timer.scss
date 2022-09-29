@@ -8,7 +8,7 @@ body {
   background: $base-color;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
-  height: 100vh;
+  // height: 100vh;
   background-color: rgb(220, 220, 214);
 }
 
@@ -63,7 +63,7 @@ button {
   outline: none;
   &:hover {
     @include transition;
-    background: $black;
+    background: $TrnsPrnt-black;
     border: solid 1px $white;
     color: $base-color;
   }
@@ -71,9 +71,9 @@ button {
 
 .game {
   &__container {
-    margin: 50px auto;
+    margin: 5rem auto;
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(10, auto);
     grid-gap: 10px;
     justify-content: center;
     perspective: 500px;
@@ -84,23 +84,12 @@ button {
     width: 125px;
   }
 
-  &__card-back {
-    // background-color: $black;
-  }
-  &__card-face {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    border-width: 1px;
-    border-style: solid;
-    overflow: hidden;
-    transition: transform 500ms ease-in-out;
-    backface-visibility: hidden;
-  }
+  // &__card-back {
+  //   background-color: $black;
+  //   position: relative;
+  //   height: 175px;
+  //   width: 125px;
+  // }
 
   &__driver-img {
     // width: 100%;
@@ -108,12 +97,30 @@ button {
   }
 }
 
-.copyright {
+.card-face {
+  position: absolute;
   display: flex;
   justify-content: center;
-  font-size: 14px;
-  color: $black;
-  border-top: 1px solid $black;
-  padding-top: 2rem;
-  margin: 0 2rem;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border-width: 1px;
+  border-style: solid;
+  overflow: hidden;
+  transition: transform 500ms ease-in-out;
+  backface-visibility: hidden;
+}
+
+.CR {
+  margin-bottom: 10rem;
+  &__copyright {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    color: $black;
+    border-top: 1px solid $black;
+    padding-top: 2rem;
+    margin: 0 2rem;
+  }
 }
