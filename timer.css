@@ -17,16 +17,30 @@ a {
 }
 
 .wrapper {
-  width: 800px;
-  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
   color: #fff;
   text-align: center;
   padding-bottom: 5rem;
   background-color: #ff0000;
   opacity: 0.9;
+  border-radius: 15px;
   border: 1px solid #fff;
   box-shadow: 0 4px 20px -1px rgba(0, 0, 0, 0.73);
-  border-radius: 15px;
+}
+@media screen and (min-width: 768px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .wrapper {
+    display: block;
+    margin: 30px auto;
+  }
 }
 
 h1,
@@ -67,10 +81,28 @@ button:hover {
 .game__container {
   margin: 5rem auto;
   display: grid;
-  grid-template-columns: repeat(10, auto);
+  grid-template-columns: repeat(4, auto);
   grid-gap: 10px;
   justify-content: center;
   perspective: 500px;
+}
+@media screen and (min-width: 768px) {
+  .game__container {
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .game__container {
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    grid-gap: 10px;
+    justify-content: center;
+  }
 }
 .game__card {
   position: relative;

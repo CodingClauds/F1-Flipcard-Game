@@ -21,18 +21,27 @@ a {
 }
 
 .wrapper {
-  width: 800px;
-  margin: 30px auto;
+  @include columnCenter;
+  margin: 0 auto;
+
   color: $white;
   text-align: center;
-
   padding-bottom: 5rem;
 
   background-color: $red;
   opacity: 0.9;
+  border-radius: 15px;
   border: 1px solid $white;
   box-shadow: 0 4px 20px -1px rgba(0, 0, 0, 0.73);
-  border-radius: 15px;
+
+  @include tablet {
+    width: 90%;
+  }
+
+  @include desktop {
+    display: block;
+    margin: 30px auto;
+  }
 }
 
 h1,
@@ -61,6 +70,7 @@ button {
   width: 180px;
   margin: 10px;
   outline: none;
+
   &:hover {
     @include transition;
     background: $TrnsPrnt-black;
@@ -73,10 +83,28 @@ button {
   &__container {
     margin: 5rem auto;
     display: grid;
-    grid-template-columns: repeat(10, auto);
+    grid-template-columns: repeat(4, auto);
     grid-gap: 10px;
     justify-content: center;
     perspective: 500px;
+
+    @include tablet {
+      margin: 5rem auto;
+      display: grid;
+      grid-template-columns: repeat(5, auto);
+      grid-gap: 10px;
+      justify-content: center;
+      // perspective: 500px;
+    }
+
+    @include desktop {
+      margin: 5rem auto;
+      display: grid;
+      grid-template-columns: repeat(10, auto);
+      grid-gap: 10px;
+      justify-content: center;
+      // perspective: 500px;
+    }
   }
   &__card {
     position: relative;
