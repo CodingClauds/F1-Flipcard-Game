@@ -10,285 +10,293 @@
     <title>Formula 1 Stopwatch</title>
   </head>
   <body>
+    <div class="switch-box">
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider round"></span>
+      </label>
+    </div>
     <div class="wrapper">
-      <h1>Formula 1 Stopwatch</h1>
-      <p>How quick can you match pairs of the F1 driver lineup?</p>
-      <p><span id="seconds"></span></p>
-      <button id="button-start">Start</button>
-      <button id="button-stop">Stop</button>
-      <button id="button-reset">Reset</button>
+      <div class="stopwatch-container">
+        <h1>Formula 1 Stopwatch</h1>
+        <p>How quickly can you match the pairs of the 2022 F1 driver lineup?</p>
+        <p><span id="seconds"></span></p>
+        <button id="button-start">Start</button>
+        <button id="button-stop">Stop</button>
+        <button id="button-reset">Reset</button>
+      </div>
 
       <p id="text"></p>
       <div id="container"></div>
-    </div>
 
-    <div class="game">
-      <div class="game__container">
-        <div class="game__card">
-          <div class="game__card-back card-face">
-            <img
-              class="game__card-face-img"
-              src=""
-              alt="generic playing card"
-            />
-          </div>
+      <div class="game">
+        <div class="game__container">
+          <div class="game__card visible">
+            <div class="game__card-back card-face">
+              <img
+                class="game__card-face-img"
+                src=""
+                alt="generic playing card"
+              />
+            </div>
 
-          <div class="game__card-front card-face">
-            <img
-              class="game__driver-img"
-              src="./assets/2022-driver-lineup/geroge-russel.png"
-              alt="f1-driver"
-            />
-          </div>
-        </div>
-
-        <div class="game__card">
-          <div class="game__card-back card-face">
-            <img src="" alt="generic playing card" />
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/geroge-russel.png"
+                alt="f1-driver"
+              />
+            </div>
           </div>
 
-          <div class="game__card-front card-face">
-            <img
-              class="game__driver-img"
-              src="./assets/2022-driver-lineup/alex-albon.png"
-              alt="f1-driver"
-            />
-          </div>
-        </div>
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img src="" alt="generic playing card" />
+            </div>
 
-        <div class="game__card">
-          <div class="game__card-back card-face">
-            <img src="" alt="generic playing card" />
-          </div>
-
-          <div class="game__card-front card-face">
-            <img
-              class="game__driver-img"
-              src="./assets/2022-driver-lineup/carlos-sainz-jr.png"
-              alt="f1-driver"
-            />
-          </div>
-        </div>
-
-        <div class="game__card">
-          <div class="game__card-back card-face">
-            <img src="" alt="generic playing card" />
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/alex-albon.png"
+                alt="f1-driver"
+              />
+            </div>
           </div>
 
-          <div class="game__card-front card-face">
-            <img
-              class="game__driver-img"
-              src="./assets/2022-driver-lineup/charles-leclerc.png"
-              alt="f1-driver"
-            />
-          </div>
-        </div>
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img src="" alt="generic playing card" />
+            </div>
 
-        <div class="game__card">
-          <div class="game__card-back card-face">
-            <img src="" alt="generic playing card" />
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/carlos-sainz-jr.png"
+                alt="f1-driver"
+              />
+            </div>
           </div>
-          <div class="game__card-front card-face">
-            <img
-              class="game__driver-img"
-              src="./assets/2022-driver-lineup/daniel-ric.png"
-              alt="f1-driver"
-            />
-          </div>
-        </div>
 
-        <div class="game__card">
-          <div class="game__card-back card-face">
-            <img src="" alt="generic playing card" />
-          </div>
-          <div class="game__card-front card-face">
-            <img
-              class="game__driver-img"
-              src="./assets/2022-driver-lineup/F1_LandoNorris.png"
-              alt="f1-driver"
-            />
-          </div>
-        </div>
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img src="" alt="generic playing card" />
+            </div>
 
-        <div class="game__card">
-          <div class="game__card-back card-face">
-            <img src="" alt="generic playing card" />
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/charles-leclerc.png"
+                alt="f1-driver"
+              />
+            </div>
           </div>
-          <div class="game__card-front card-face">
-            <img
-              class="game__driver-img"
-              src="./assets/2022-driver-lineup/fern-alonso.png"
-              alt="f1-driver"
-            />
-          </div>
-        </div>
 
-        <div class="game__card">
-          <div class="game__card-back card-face">
-            <img src="" alt="generic playing card" />
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img src="" alt="generic playing card" />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/daniel-ric.png"
+                alt="f1-driver"
+              />
+            </div>
           </div>
-          <div class="game__card-front card-face">
-            <img
-              class="game__driver-img"
-              src="./assets/2022-driver-lineup/guanyu-zhou-alfa.png"
-              alt="f1-driver"
-            />
-          </div>
-        </div>
 
-        <div class="game__card">
-          <div class="game__card-back card-face">
-            <img src="" alt="generic playing card" />
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img src="" alt="generic playing card" />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/F1_LandoNorris.png"
+                alt="f1-driver"
+              />
+            </div>
           </div>
-          <div class="game__card-front card-face">
-            <img
-              class="game__driver-img"
-              src="./assets/2022-driver-lineup/kevin-magnussen.png"
-              alt="f1-driver"
-            />
-          </div>
-        </div>
 
-        <div class="game__card">
-          <div class="game__card-back card-face">
-            <img src="" alt="generic playing card" />
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img src="" alt="generic playing card" />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/fern-alonso.png"
+                alt="f1-driver"
+              />
+            </div>
           </div>
-          <div class="game__card-front card-face">
-            <img
-              class="game__driver-img"
-              src="./assets/2022-driver-lineup/lance-stroll.png"
-              alt="f1-driver"
-            />
-          </div>
-        </div>
 
-        <div class="game__card">
-          <div class="game__card-back card-face">
-            <img src="" alt="generic playing card" />
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img src="" alt="generic playing card" />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/guanyu-zhou-alfa.png"
+                alt="f1-driver"
+              />
+            </div>
           </div>
-          <div class="game__card-front card-face">
-            <img
-              class="game__driver-img"
-              src="./assets/2022-driver-lineup/lewis-hamilton.png"
-              alt="f1-driver"
-            />
-          </div>
-        </div>
 
-        <div class="game__card">
-          <div class="game__card-back card-face">
-            <img src="" alt="generic playing card" />
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img src="" alt="generic playing card" />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/kevin-magnussen.png"
+                alt="f1-driver"
+              />
+            </div>
           </div>
-          <div class="game__card-front card-face">
-            <img
-              class="game__driver-img"
-              src="./assets/2022-driver-lineup/mark-verstappen.png"
-              alt="f1-driver"
-            />
-          </div>
-        </div>
 
-        <div class="game__card">
-          <div class="game__card-back card-face">
-            <img src="" alt="generic playing card" />
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img src="" alt="generic playing card" />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/lance-stroll.png"
+                alt="f1-driver"
+              />
+            </div>
           </div>
-          <div class="game__card-front card-face">
-            <img
-              class="game__driver-img"
-              src="./assets/2022-driver-lineup/Mick-Schumacher.png"
-              alt="f1-driver"
-            />
-          </div>
-        </div>
 
-        <div class="game__card">
-          <div class="game__card-back card-face">
-            <img src="" alt="generic playing card" />
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img src="" alt="generic playing card" />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/lewis-hamilton.png"
+                alt="f1-driver"
+              />
+            </div>
           </div>
-          <div class="game__card-front card-face">
-            <img
-              class="game__driver-img"
-              src="./assets/2022-driver-lineup/nicholas-latifi.png"
-              alt="f1-driver"
-            />
-          </div>
-        </div>
 
-        <div class="game__card">
-          <div class="game__card-back card-face">
-            <img src="" alt="generic playing card" />
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img src="" alt="generic playing card" />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/mark-verstappen.png"
+                alt="f1-driver"
+              />
+            </div>
           </div>
-          <div class="game__card-front card-face">
-            <img
-              class="game__driver-img"
-              src="./assets/2022-driver-lineup/ocon.png"
-              alt="f1-driver"
-            />
-          </div>
-        </div>
 
-        <div class="game__card">
-          <div class="game__card-back card-face">
-            <img src="" alt="generic playing card" />
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img src="" alt="generic playing card" />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/Mick-Schumacher.png"
+                alt="f1-driver"
+              />
+            </div>
           </div>
-          <div class="game__card-front card-face">
-            <img
-              class="game__driver-img"
-              src="./assets/2022-driver-lineup/pierre-gasly.png"
-              alt="f1-driver"
-            />
-          </div>
-        </div>
 
-        <div class="game__card">
-          <div class="game__card-back card-face">
-            <img src="" alt="generic playing card" />
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img src="" alt="generic playing card" />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/nicholas-latifi.png"
+                alt="f1-driver"
+              />
+            </div>
           </div>
-          <div class="game__card-front card-face">
-            <img
-              class="game__driver-img"
-              src="./assets/2022-driver-lineup/sebastian-vettel.png"
-              alt="f1-driver"
-            />
-          </div>
-        </div>
 
-        <div class="game__card">
-          <div class="game__card-back card-face">
-            <img src="" alt="generic playing card" />
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img src="" alt="generic playing card" />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/ocon.png"
+                alt="f1-driver"
+              />
+            </div>
           </div>
-          <div class="game__card-front card-face">
-            <img
-              class="game__driver-img"
-              src="./assets/2022-driver-lineup/sergio-perez.png"
-              alt="f1-driver"
-            />
-          </div>
-        </div>
 
-        <div class="game__card">
-          <div class="game__card-back card-face">
-            <img src="" alt="generic playing card" />
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img src="" alt="generic playing card" />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/pierre-gasly.png"
+                alt="f1-driver"
+              />
+            </div>
           </div>
-          <div class="game__card-front card-face">
-            <img
-              class="game__driver-img"
-              src="./assets/2022-driver-lineup/valtteri-bottas-alfa-romeo.png"
-              alt="f1-driver"
-            />
-          </div>
-        </div>
 
-        <div class="game__card">
-          <div class="game__card-back card-face">
-            <img src="" alt="generic playing card" />
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img src="" alt="generic playing card" />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/sebastian-vettel.png"
+                alt="f1-driver"
+              />
+            </div>
           </div>
-          <div class="game__card-front card-face">
-            <img
-              class="game__driver-img"
-              src="./assets/2022-driver-lineup/yuki-tsunoda.png"
-              alt="f1 driver"
-            />
+
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img src="" alt="generic playing card" />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/sergio-perez.png"
+                alt="f1-driver"
+              />
+            </div>
+          </div>
+
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img src="" alt="generic playing card" />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/valtteri-bottas-alfa-romeo.png"
+                alt="f1-driver"
+              />
+            </div>
+          </div>
+
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img src="" alt="generic playing card" />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/yuki-tsunoda.png"
+                alt="f1 driver"
+              />
+            </div>
           </div>
         </div>
       </div>
