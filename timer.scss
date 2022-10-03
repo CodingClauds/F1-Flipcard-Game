@@ -21,18 +21,35 @@ a {
 }
 
 .wrapper {
-  width: 800px;
-  margin: 30px auto;
+  @include columnCenter;
+  margin: 0 auto;
   color: $white;
   text-align: center;
-
-  padding-bottom: 5rem;
-
-  background-color: $red;
+  background-color: $white;
   opacity: 0.9;
-  border: 1px solid $white;
-  box-shadow: 0 4px 20px -1px rgba(0, 0, 0, 0.73);
   border-radius: 15px;
+  border: 2px solid $red;
+  box-shadow: 0 4px 20px -1px rgba(0, 0, 0, 0.73);
+
+  margin: 30px auto;
+  margin-bottom: 5rem;
+  overflow: hidden;
+
+  @include tablet {
+    width: 90%;
+  }
+
+  @include desktop {
+    // display: block;
+  }
+}
+
+.stopwatch-container {
+  margin: 0 auto;
+  margin-top: 1rem;
+  background-color: $red;
+  width: 800px;
+  border-radius: 12px;
 }
 
 h1,
@@ -61,6 +78,7 @@ button {
   width: 180px;
   margin: 10px;
   outline: none;
+
   &:hover {
     @include transition;
     background: $TrnsPrnt-black;
@@ -73,43 +91,67 @@ button {
   &__container {
     margin: 5rem auto;
     display: grid;
-    grid-template-columns: repeat(10, auto);
+    grid-template-columns: repeat(4, auto);
     grid-gap: 10px;
     justify-content: center;
     perspective: 500px;
+
+    @include tablet {
+      grid-template-columns: repeat(5, auto);
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(10, auto);
+    }
   }
+
   &__card {
     position: relative;
     height: 175px;
     width: 125px;
   }
 
-  // &__card-back {
-  //   background-color: $black;
-  //   position: relative;
-  //   height: 175px;
-  //   width: 125px;
-  // }
+  .card-face {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border-width: 1px;
+    border-style: solid;
+    overflow: hidden;
+    transition: transform 500ms ease-in-out;
+    backface-visibility: hidden;
+  }
+
+  &__card-back-img {
+    width: 100%;
+  }
 
   &__driver-img {
-    // width: 100%;
-    height: 180px;
+    height: 100%;
   }
-}
 
-.card-face {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  border-width: 1px;
-  border-style: solid;
-  overflow: hidden;
-  transition: transform 500ms ease-in-out;
-  backface-visibility: hidden;
+  &__card:hover &__card-back {
+    transform: rotateY(-180deg);
+  }
+
+  &__card:hover &__card-front {
+    transform: rotateY(0);
+  }
+
+  &__card-back.card-face {
+    transform: rotateY(-180deg);
+    border: 1px solid black;
+  }
+
+  &__card-front.card-face {
+    background-color: black;
+    transition: 1s ease-in;
+    transform: rotateY(-180deg);
+  }
 }
 
 .CR {
@@ -123,4 +165,68 @@ button {
     padding-top: 2rem;
     margin: 0 2rem;
   }
+}
+
+.switch-box {
+  // position: relative;
+  // top: 30px;
+  // left: -620px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
