@@ -33,16 +33,28 @@ a {
   margin: 30px auto;
   margin-bottom: 5rem;
   overflow: hidden;
-  width: 90%;
+  width: 85%;
+
+  @include desktop {
+    width: 95%;
+  }
 }
 
 .stopwatch-container {
   margin: 0 auto;
   margin-top: 1rem;
-  background-color: $black;
-  border: 2px solid orange;
-  width: 800px;
+  background-color: $red;
+  border: 2px solid maroon;
+  width: 400px;
   border-radius: 12px;
+
+  @include tablet {
+    width: 600px;
+  }
+
+  @include desktop {
+    width: 800px;
+  }
 }
 
 h1,
@@ -80,11 +92,52 @@ button {
   }
 }
 
+.overlay-text {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-weight: 600;
+  font-style: italic;
+  transition: background-color 500ms, font-size 500ms;
+}
+
+.overlay-text-small {
+  font-size: 0.3em;
+}
+
+.overlay-btn {
+  width: 14rem;
+}
+
+.overlay-text.visible {
+  display: flex;
+  animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 7em;
+  }
+}
+
 .game {
   &__container {
     margin: 5rem auto;
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(2, auto);
     grid-gap: 10px;
     justify-content: center;
     perspective: 500px;
@@ -145,11 +198,6 @@ button {
   }
 
   // ==================== test ===================
-
-  // Rotation of the flip cards
-  // &__card-back.card-face {
-  //   transform: rotateY(0);
-  // }
 
   &__card-front.card-face {
     transform: rotateY(-180deg);

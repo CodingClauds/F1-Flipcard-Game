@@ -32,16 +32,31 @@ a {
   margin: 30px auto;
   margin-bottom: 5rem;
   overflow: hidden;
-  width: 90%;
+  width: 85%;
+}
+@media screen and (min-width: 1280px) {
+  .wrapper {
+    width: 95%;
+  }
 }
 
 .stopwatch-container {
   margin: 0 auto;
   margin-top: 1rem;
-  background-color: rgb(0, 0, 0);
-  border: 2px solid orange;
-  width: 800px;
+  background-color: #ff0000;
+  border: 2px solid maroon;
+  width: 400px;
   border-radius: 12px;
+}
+@media screen and (min-width: 768px) {
+  .stopwatch-container {
+    width: 600px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .stopwatch-container {
+    width: 800px;
+  }
 }
 
 h1,
@@ -79,10 +94,62 @@ button:hover {
   color: #fff;
 }
 
+.overlay-text {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-weight: 600;
+  font-style: italic;
+  transition: background-color 500ms, font-size 500ms;
+}
+
+.overlay-text-small {
+  font-size: 0.3em;
+}
+
+.overlay-btn {
+  width: 14rem;
+}
+
+.overlay-text.visible {
+  display: flex;
+  -webkit-animation: overlay-grow 500ms forwards;
+          animation: overlay-grow 500ms forwards;
+}
+
+@-webkit-keyframes overlay-grow {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 7em;
+  }
+}
+
+@keyframes overlay-grow {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 7em;
+  }
+}
 .game__container {
   margin: 5rem auto;
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(2, auto);
   grid-gap: 10px;
   justify-content: center;
   perspective: 500px;
