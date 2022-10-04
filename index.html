@@ -26,12 +26,27 @@
         <button id="button-reset">Reset</button>
       </div>
 
-      <p id="text"></p>
-      <div id="container"></div>
+      <div id="overlay-container">
+        <div class="overlay-text visible">Click to Start</div>
+
+        <div id="game-over-text" class="overlay-text">
+          GAME OVER!
+          <button class="overlay-text-small overlay-btn">
+            Click to Restart
+          </button>
+        </div>
+
+        <div id="victory-text" class="overlay-text">
+          Podium Finish!!
+          <button class="overlay-text-small overlay-btn">
+            Click to Restart
+          </button>
+        </div>
+      </div>
 
       <div class="game">
         <div class="game__container">
-          <div class="game__card visible">
+          <div class="game__card">
             <div class="game__card-back card-face">
               <img
                 class="game__card-back-img"
