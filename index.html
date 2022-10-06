@@ -10,12 +10,6 @@
     <title>Formula 1 Stopwatch</title>
   </head>
   <body>
-    <!-- <div class="switch-box">
-      <label class="switch">
-        <input type="checkbox" />
-        <span class="slider round"></span>
-      </label>
-    </div> -->
     <div class="wrapper">
       <div class="stopwatch-container">
         <h1>Formula 1 Stopwatch</h1>
@@ -27,7 +21,9 @@
       </div>
 
       <div id="overlay-container">
-        <div class="overlay-text visible">Click to Start</div>
+        <div class="overlay-text visible">
+          <span class="click-me">Click to Start</span>
+        </div>
 
         <div id="game-over-text" class="overlay-text">
           GAME OVER!
@@ -37,12 +33,22 @@
         </div>
 
         <div id="victory-text" class="overlay-text">
-          Podium Finish!!
+          P1 Brilliant Finish!!
           <button class="overlay-text-small overlay-btn">
             Click to Restart
           </button>
         </div>
       </div>
+
+      <div class="game-container">
+        <div class="game-info-container">
+          <div class="game-info">
+            Time <span id="time-remaining">100</span>
+          </div>
+          <div class="game-info">
+            Flips <span id="flips">0</span>
+          </div>
+        </div>
 
       <div class="game">
         <div class="game__container">
@@ -57,7 +63,7 @@
 
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img"
+                class="game__driver-img card-value"
                 src="./assets/2022-driver-lineup/geroge-russel.png"
                 alt="f1-driver"
               />
@@ -75,8 +81,8 @@
 
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img"
-                src="./assets/2022-driver-lineup/alex-albon.png"
+                class="game__driver-img card-value"
+                src="./assets/2022-driver-lineup/geroge-russel.png"
                 alt="f1-driver"
               />
             </div>
@@ -93,7 +99,7 @@
 
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img"
+                class="game__driver-img card-value"
                 src="./assets/2022-driver-lineup/carlos-sainz-jr.png"
                 alt="f1-driver"
               />
@@ -111,14 +117,14 @@
 
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img"
+                class="game__driver-img card-value"
                 src="./assets/2022-driver-lineup/charles-leclerc.png"
                 alt="f1-driver"
               />
             </div>
           </div>
 
-          <div class="game__card">
+          <!-- <div class="game__card">
             <div class="game__card-back card-face">
               <img
                 class="game__card-back-img"
@@ -128,7 +134,7 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img"
+                class="game__driver-img card-value"
                 src="./assets/2022-driver-lineup/daniel-ric.png"
                 alt="f1-driver"
               />
@@ -145,7 +151,7 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img"
+                class="game__driver-img card-value"
                 src="./assets/2022-driver-lineup/F1_LandoNorris.png"
                 alt="f1-driver"
               />
@@ -162,7 +168,7 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img"
+                class="game__driver-img card-value"
                 src="./assets/2022-driver-lineup/fern-alonso.png"
                 alt="f1-driver"
               />
@@ -179,7 +185,7 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img"
+                class="game__driver-img card-value"
                 src="./assets/2022-driver-lineup/guanyu-zhou-alfa.png"
                 alt="f1-driver"
               />
@@ -196,7 +202,7 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img"
+                class="game__driver-img card-value"
                 src="./assets/2022-driver-lineup/kevin-magnussen.png"
                 alt="f1-driver"
               />
@@ -213,7 +219,7 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img"
+                class="game__driver-img card-value"
                 src="./assets/2022-driver-lineup/lance-stroll.png"
                 alt="f1-driver"
               />
@@ -230,7 +236,7 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img"
+                class="game__driver-img card-value"
                 src="./assets/2022-driver-lineup/lewis-hamilton.png"
                 alt="f1-driver"
               />
@@ -247,7 +253,7 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img"
+                class="game__driver-img card-value"
                 src="./assets/2022-driver-lineup/mark-verstappen.png"
                 alt="f1-driver"
               />
@@ -264,7 +270,7 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img"
+                class="game__driver-img card-value"
                 src="./assets/2022-driver-lineup/Mick-Schumacher.png"
                 alt="f1-driver"
               />
@@ -281,7 +287,7 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img"
+                class="game__driver-img card-value"
                 src="./assets/2022-driver-lineup/nicholas-latifi.png"
                 alt="f1-driver"
               />
@@ -298,7 +304,7 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img"
+                class="game__driver-img card-value"
                 src="./assets/2022-driver-lineup/ocon.png"
                 alt="f1-driver"
               />
@@ -315,7 +321,7 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img"
+                class="game__driver-img card-value"
                 src="./assets/2022-driver-lineup/pierre-gasly.png"
                 alt="f1-driver"
               />
@@ -332,7 +338,7 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img"
+                class="game__driver-img card-value"
                 src="./assets/2022-driver-lineup/sebastian-vettel.png"
                 alt="f1-driver"
               />
@@ -349,7 +355,7 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img"
+                class="game__driver-img card-value"
                 src="./assets/2022-driver-lineup/sergio-perez.png"
                 alt="f1-driver"
               />
@@ -366,7 +372,7 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img"
+                class="game__driver-img card-value"
                 src="./assets/2022-driver-lineup/valtteri-bottas-alfa-romeo.png"
                 alt="f1-driver"
               />
@@ -383,15 +389,15 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img"
+                class="game__driver-img card-value"
                 src="./assets/2022-driver-lineup/yuki-tsunoda.png"
                 alt="f1 driver"
               />
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div> -->
+    </div> 
 
     <div class="cp-container">
       <span class="cp-container__copyright"
