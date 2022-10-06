@@ -155,7 +155,7 @@ class MixAndMatch {
 
   // Fucntion to grab the className and be able to match it using the src img-file.
   // is src[0] === src[0]
-  getCardType() {
+  getCardType(card) {
     return card.getElementsByClassName("card-value")[0].src;
   }
 
