@@ -5,19 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="timer.css" />
-    <link rel="icon" type="image/x-icon" href=".//assets/f1-logo.png" />
+    <link rel="icon" type="image/x-icon" href="./assets/f1-logo.png" />
 
-    <title>Formula 1 Stopwatch</title>
+    <title>Formula 1 Flip-Card</title>
   </head>
   <body>
     <div class="wrapper">
       <div class="stopwatch-container">
-        <h1>Formula 1 Stopwatch</h1>
-        <p>How quickly can you match the pairs of the 2022 F1 driver lineup?</p>
-        <p><span id="seconds"></span></p>
-        <button id="button-start">Start</button>
-        <button id="button-stop">Stop</button>
-        <button id="button-reset">Reset</button>
+        <h1>Formula 1</h1>
+        <p class="f1-description">How quickly can you match the pairs of the 2022 F1 driver lineup?</p>
+
+        <div class="game-info-container">
+          <div class="game-info">
+            Time: <span id="time-remaining">100</span>
+          </div>
+          <div class="game-info">
+            Flips: <span id="flips">0</span>
+          </div>
+        </div>
       </div>
 
       <div id="overlay-container">
@@ -41,105 +46,8 @@
       </div>
 
       <div class="game-container">
-        <div class="game-info-container">
-          <div class="game-info">
-            Time <span id="time-remaining">100</span>
-          </div>
-          <div class="game-info">
-            Flips <span id="flips">0</span>
-          </div>
-        </div>
-
       <div class="game">
         <div class="game__container">
-          <div class="game__card">
-            <div class="game__card-back card-face">
-              <img
-                class="game__card-back-img"
-                src="./assets/f1-logo.png"
-                alt="generic playing card"
-              />
-            </div>
-
-            <div class="game__card-front card-face">
-              <img
-                class="game__driver-img card-value"
-                src="./assets/2022-driver-lineup/geroge-russel.png"
-                alt="f1-driver"
-              />
-            </div>
-          </div>
-
-          <div class="game__card">
-            <div class="game__card-back card-face">
-              <img
-                class="game__card-back-img"
-                src="./assets/f1-logo.png"
-                alt="generic playing card"
-              />
-            </div>
-
-            <div class="game__card-front card-face">
-              <img
-                class="game__driver-img card-value"
-                src="./assets/2022-driver-lineup/geroge-russel.png"
-                alt="f1-driver"
-              />
-            </div>
-          </div>
-
-          <div class="game__card">
-            <div class="game__card-back card-face">
-              <img
-                class="game__card-back-img"
-                src="./assets/f1-logo.png"
-                alt="generic playing card"
-              />
-            </div>
-
-            <div class="game__card-front card-face">
-              <img
-                class="game__driver-img card-value"
-                src="./assets/2022-driver-lineup/carlos-sainz-jr.png"
-                alt="f1-driver"
-              />
-            </div>
-          </div>
-
-          <div class="game__card">
-            <div class="game__card-back card-face">
-              <img
-                class="game__card-back-img"
-                src="./assets/f1-logo.png"
-                alt="generic playing card"
-              />
-            </div>
-
-            <div class="game__card-front card-face">
-              <img
-                class="game__driver-img card-value"
-                src="./assets/2022-driver-lineup/charles-leclerc.png"
-                alt="f1-driver"
-              />
-            </div>
-          </div>
-
-          <!-- <div class="game__card">
-            <div class="game__card-back card-face">
-              <img
-                class="game__card-back-img"
-                src="./assets/f1-logo.png"
-                alt="generic playing card"
-              />
-            </div>
-            <div class="game__card-front card-face">
-              <img
-                class="game__driver-img card-value"
-                src="./assets/2022-driver-lineup/daniel-ric.png"
-                alt="f1-driver"
-              />
-            </div>
-          </div>
 
           <div class="game__card">
             <div class="game__card-back card-face">
@@ -151,94 +59,10 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img card-value"
-                src="./assets/2022-driver-lineup/F1_LandoNorris.png"
-                alt="f1-driver"
-              />
-            </div>
-          </div>
-
-          <div class="game__card">
-            <div class="game__card-back card-face">
-              <img
-                class="game__card-back-img"
-                src="./assets/f1-logo.png"
-                alt="generic playing card"
-              />
-            </div>
-            <div class="game__card-front card-face">
-              <img
-                class="game__driver-img card-value"
-                src="./assets/2022-driver-lineup/fern-alonso.png"
-                alt="f1-driver"
-              />
-            </div>
-          </div>
-
-          <div class="game__card">
-            <div class="game__card-back card-face">
-              <img
-                class="game__card-back-img"
-                src="./assets/f1-logo.png"
-                alt="generic playing card"
-              />
-            </div>
-            <div class="game__card-front card-face">
-              <img
-                class="game__driver-img card-value"
-                src="./assets/2022-driver-lineup/guanyu-zhou-alfa.png"
-                alt="f1-driver"
-              />
-            </div>
-          </div>
-
-          <div class="game__card">
-            <div class="game__card-back card-face">
-              <img
-                class="game__card-back-img"
-                src="./assets/f1-logo.png"
-                alt="generic playing card"
-              />
-            </div>
-            <div class="game__card-front card-face">
-              <img
-                class="game__driver-img card-value"
-                src="./assets/2022-driver-lineup/kevin-magnussen.png"
-                alt="f1-driver"
-              />
-            </div>
-          </div>
-
-          <div class="game__card">
-            <div class="game__card-back card-face">
-              <img
-                class="game__card-back-img"
-                src="./assets/f1-logo.png"
-                alt="generic playing card"
-              />
-            </div>
-            <div class="game__card-front card-face">
-              <img
-                class="game__driver-img card-value"
-                src="./assets/2022-driver-lineup/lance-stroll.png"
-                alt="f1-driver"
-              />
-            </div>
-          </div>
-
-          <div class="game__card">
-            <div class="game__card-back card-face">
-              <img
-                class="game__card-back-img"
-                src="./assets/f1-logo.png"
-                alt="generic playing card"
-              />
-            </div>
-            <div class="game__card-front card-face">
-              <img
-                class="game__driver-img card-value"
+                class="game__driver-img"
                 src="./assets/2022-driver-lineup/lewis-hamilton.png"
                 alt="f1-driver"
+                id="1-mercedes"
               />
             </div>
           </div>
@@ -251,11 +75,13 @@
                 alt="generic playing card"
               />
             </div>
+
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img card-value"
-                src="./assets/2022-driver-lineup/mark-verstappen.png"
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/geroge-russel.png"
                 alt="f1-driver"
+                id="2-mercedes"
               />
             </div>
           </div>
@@ -268,11 +94,13 @@
                 alt="generic playing card"
               />
             </div>
+
             <div class="game__card-front card-face">
               <img
                 class="game__driver-img card-value"
-                src="./assets/2022-driver-lineup/Mick-Schumacher.png"
+                src="./assets/2022-driver-lineup/alex-albon.png"
                 alt="f1-driver"
+                id="1-williams"
               />
             </div>
           </div>
@@ -287,9 +115,48 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img card-value"
+                class="game__driver-img"
                 src="./assets/2022-driver-lineup/nicholas-latifi.png"
                 alt="f1-driver"
+                id="2-williams"
+              />
+            </div>
+          </div>
+
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img
+                class="game__card-back-img"
+                src="./assets/f1-logo.png"
+                alt="generic playing card"
+              />
+            </div>
+
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/carlos-sainz-jr.png"
+                alt="f1-driver"
+                id="1-ferrari"
+              />
+            </div>
+          </div>
+
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img
+                class="game__card-back-img"
+                src="./assets/f1-logo.png"
+                alt="generic playing card"
+              />
+            </div>
+
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/charles-leclerc.png"
+                alt="f1-driver"
+                id = "2-ferrari"
               />
             </div>
           </div>
@@ -304,9 +171,64 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img card-value"
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/daniel-ric.png"
+                alt="f1-driver"
+                id="1-mclaren"
+              />
+            </div>
+          </div>
+
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img
+                class="game__card-back-img"
+                src="./assets/f1-logo.png"
+                alt="generic playing card"
+              />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/F1_LandoNorris.png"
+                alt="f1-driver"
+                id="2-mclaren"
+              />
+            </div>
+          </div>
+
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img
+                class="game__card-back-img"
+                src="./assets/f1-logo.png"
+                alt="generic playing card"
+              />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/fern-alonso.png"
+                alt="f1-driver"
+                id="1-alpine"
+              />
+            </div>
+          </div>
+
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img
+                class="game__card-back-img"
+                src="./assets/f1-logo.png"
+                alt="generic playing card"
+              />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
                 src="./assets/2022-driver-lineup/ocon.png"
                 alt="f1-driver"
+                id="2-alpine"
               />
             </div>
           </div>
@@ -321,9 +243,10 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img card-value"
-                src="./assets/2022-driver-lineup/pierre-gasly.png"
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/guanyu-zhou-alfa.png"
                 alt="f1-driver"
+                id="1-alfaRomeo"
               />
             </div>
           </div>
@@ -338,43 +261,10 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img card-value"
-                src="./assets/2022-driver-lineup/sebastian-vettel.png"
-                alt="f1-driver"
-              />
-            </div>
-          </div>
-
-          <div class="game__card">
-            <div class="game__card-back card-face">
-              <img
-                class="game__card-back-img"
-                src="./assets/f1-logo.png"
-                alt="generic playing card"
-              />
-            </div>
-            <div class="game__card-front card-face">
-              <img
-                class="game__driver-img card-value"
-                src="./assets/2022-driver-lineup/sergio-perez.png"
-                alt="f1-driver"
-              />
-            </div>
-          </div>
-
-          <div class="game__card">
-            <div class="game__card-back card-face">
-              <img
-                class="game__card-back-img"
-                src="./assets/f1-logo.png"
-                alt="generic playing card"
-              />
-            </div>
-            <div class="game__card-front card-face">
-              <img
-                class="game__driver-img card-value"
+                class="game__driver-img"
                 src="./assets/2022-driver-lineup/valtteri-bottas-alfa-romeo.png"
                 alt="f1-driver"
+                id="2-alfaRomeo"
               />
             </div>
           </div>
@@ -389,21 +279,147 @@
             </div>
             <div class="game__card-front card-face">
               <img
-                class="game__driver-img card-value"
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/kevin-magnussen.png"
+                alt="f1-driver"
+                id="1-hass"
+              />
+            </div>
+          </div>
+
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img
+                class="game__card-back-img"
+                src="./assets/f1-logo.png"
+                alt="generic playing card"
+              />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/Mick-Schumacher.png"
+                alt="f1-driver"
+                id="2-hass"
+              />
+            </div>
+          </div>
+
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img
+                class="game__card-back-img"
+                src="./assets/f1-logo.png"
+                alt="generic playing card"
+              />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/lance-stroll.png"
+                alt="f1-driver"
+                id="1-aston"
+              />
+            </div>
+          </div>
+
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img
+                class="game__card-back-img"
+                src="./assets/f1-logo.png"
+                alt="generic playing card"
+              />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/sebastian-vettel.png"
+                alt="f1-driver"
+                id="2-aston"
+              />
+            </div>
+          </div>
+
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img
+                class="game__card-back-img"
+                src="./assets/f1-logo.png"
+                alt="generic playing card"
+              />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/max-verstappen.png"
+                alt="f1-driver"
+                id="1-redbull"
+              />
+            </div>
+          </div>
+
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img
+                class="game__card-back-img"
+                src="./assets/f1-logo.png"
+                alt="generic playing card"
+              />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/sergio-perez.png"
+                alt="f1-driver"
+                id="2-redbull"
+              />
+            </div>
+          </div>
+
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img
+                class="game__card-back-img"
+                src="./assets/f1-logo.png"
+                alt="generic playing card"
+              />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
+                src="./assets/2022-driver-lineup/pierre-gasly.png"
+                alt="f1-driver"
+                id="1-alfaTori"
+              />
+            </div>
+          </div>
+
+          <div class="game__card">
+            <div class="game__card-back card-face">
+              <img
+                class="game__card-back-img"
+                src="./assets/f1-logo.png"
+                alt="generic playing card"
+              />
+            </div>
+            <div class="game__card-front card-face">
+              <img
+                class="game__driver-img"
                 src="./assets/2022-driver-lineup/yuki-tsunoda.png"
                 alt="f1 driver"
+                id="2-alfaTori"
               />
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
+      <div class="cp-container">
+        <span class="cp-container__copyright"
+          >Claudio Miranda © &nbsp;<span id="copyright-year"></span
+        ></span>
+      </div>
     </div> 
-
-    <div class="cp-container">
-      <span class="cp-container__copyright"
-        >Claudio Miranda © &nbsp;<span id="copyright-year"></span
-      ></span>
-    </div>
     <script src="timer.js"></script>
   </body>
 </html>
