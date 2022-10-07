@@ -8,7 +8,7 @@ body {
   background: $base-color;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
-  background-color: rgb(220, 220, 214);
+  background-color: $gray;
 }
 
 li {
@@ -19,15 +19,24 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 2.6em;
+  text-transform: uppercase;
+}
+
 .wrapper {
   @include columnCenter;
   margin: 0 auto;
   color: $white;
   text-align: center;
-  background-color: rgb(220, 220, 214);
+  background-color: $gray;
   opacity: 0.9;
   border-radius: 15px;
-  border: 2px solid red;
+  border: 2px solid $red;
   box-shadow: 0 4px 20px -1px rgba(0, 0, 0, 0.73);
 
   margin: 30px auto;
@@ -57,18 +66,25 @@ a {
   }
 }
 
-h1,
-h2,
-h3 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-size: 2.6em;
-  text-transform: uppercase;
+.f1-description {
+  font-size: 18px;
+}
+.game-info-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem;
 }
 
-#seconds,
-#tens {
-  font-size: 2em;
+.game-info {
+  width: 6rem;
+  border-radius: 12px;
+  border: 1px solid $white;
+  padding: 1rem;
+
+  @include tablet {
+    width: 10rem;
+    font-size: 2rem;
+  }
 }
 
 button {
@@ -103,7 +119,7 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: white;
+  color: $white;
   font-weight: 600;
   font-style: italic;
   transition: background-color 500ms, font-size 500ms;
@@ -114,7 +130,7 @@ button {
 }
 
 #game-over-text {
-  color: red;
+  color: $red;
 }
 
 .overlay-text-small {
@@ -204,7 +220,7 @@ button {
   &__card-back {
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: $black;
     transform: rotateY(0);
   }
 }
