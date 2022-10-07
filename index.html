@@ -13,15 +13,15 @@
     <div class="wrapper">
       <div class="stopwatch-container">
         <h1>Formula 1</h1>
-        <p class="f1-description">
-          How quickly can you match the pairs of the 2022 F1 driver lineup?
-        </p>
+        <p class="f1-description">How quickly can you match the pairs of the 2022 F1 driver lineup?</p>
 
         <div class="game-info-container">
           <div class="game-info">
             Time: <span id="time-remaining">100</span>
           </div>
-          <div class="game-info">Flips: <span id="flips">0</span></div>
+          <div class="game-info">
+            Flips: <span id="flips">0</span>
+          </div>
         </div>
       </div>
 
@@ -45,8 +45,10 @@
         </div>
       </div>
 
+      <div class="game-container">
       <div class="game">
         <div class="game__container">
+
           <div class="game__card">
             <div class="game__card-back card-face">
               <img
@@ -154,7 +156,7 @@
                 class="game__driver-img"
                 src="./assets/2022-driver-lineup/charles-leclerc.png"
                 alt="f1-driver"
-                id="2-ferrari"
+                id = "2-ferrari"
               />
             </div>
           </div>
@@ -417,7 +419,7 @@
           >Claudio Miranda © &nbsp;<span id="copyright-year"></span
         ></span>
       </div>
-    </div>
+    </div> 
     <script src="timer.js"></script>
   </body>
 </html>
