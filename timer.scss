@@ -42,8 +42,10 @@ h3 {
   margin: 30px auto;
   margin-bottom: 5rem;
   overflow: hidden;
-  width: 85%;
 
+  @include tablet {
+    width: 85%;
+  }
   @include desktop {
     width: 95%;
   }
@@ -51,13 +53,13 @@ h3 {
 
 .stopwatch-container {
   margin: 0 auto;
-  margin-top: 1rem;
   background-color: $red;
-  border: 2px solid maroon;
-  width: 400px;
   border-radius: 12px;
 
   @include tablet {
+    margin-top: 1rem;
+    border: 2px solid maroon;
+    border-radius: 12px;
     width: 600px;
   }
 
@@ -68,6 +70,7 @@ h3 {
 
 .f1-description {
   font-size: 18px;
+  padding: 0 25px;
 }
 .game-info-container {
   display: flex;
@@ -161,7 +164,7 @@ button {
   &__container {
     margin: 5rem auto;
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(3, auto);
     grid-gap: 10px;
     justify-content: center;
     perspective: 500px;
