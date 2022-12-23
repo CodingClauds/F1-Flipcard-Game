@@ -7,7 +7,6 @@ body {
   box-sizing: border-box;
   background: $base-color;
   font-family: "Titillium Web", sans-serif;
-
   background-color: $gray;
 }
 
@@ -19,20 +18,20 @@ a {
   text-decoration: none;
 }
 
+.sec-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
 .wrapper {
   @include columnCenter;
-  margin: 0 auto;
   color: $white;
   text-align: center;
-  background-color: $gray;
-  opacity: 0.9;
-  border-radius: 15px;
-  border: 2px solid $red;
-  box-shadow: 0 4px 20px -1px rgba(0, 0, 0, 0.73);
-
-  margin: 30px auto;
-  margin-bottom: 5rem;
-  overflow: hidden;
+  margin: 0 auto;
 
   @include tablet {
     width: 85%;
@@ -52,6 +51,7 @@ a {
     rgba(255, 231, 0, 1) 92%
   );
   border-radius: 12px;
+  box-shadow: 0 4px 20px -1px rgba(0, 0, 0, 0.7);
 
   @include tablet {
     margin-top: 1rem;
@@ -110,7 +110,6 @@ button {
   cursor: pointer;
   font-size: 1.2em;
   padding: 18px 10px;
-  // width: 180px;
   margin: 10px;
   outline: none;
 
